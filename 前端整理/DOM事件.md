@@ -11,6 +11,7 @@ DOM事件类
 
 DOM事件模型<br>
 * 事件捕获
+* 目标元素
 * 事件冒泡
 
 DOM事件流<br>
@@ -21,12 +22,12 @@ DOM事件流<br>
 * window->document->html->body->父元素->目标元素
 
 Event对象的常见应用<br>
-* event.preventDefault()
+* event.preventDefault()（IE下无效，必须设置成returnVlaue ''）
 * event.stopPropagation()
 * event.stopimmediatePropagation()<br>
 注册了两个事件的时候可以在执行完第一个事件之后阻止第二个事件执行
 * event.currentTarget<br>
-当前所绑定的事件的元素
+当前所绑定的事件的元素（IE下是srcElement）
 * event.target<br>
 当前被点击的元素
 
